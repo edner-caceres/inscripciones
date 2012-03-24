@@ -1,0 +1,29 @@
+<div class="cursos form">
+<?php echo $this->Form->create('Curso');?>
+	<fieldset>
+		<legend><?php echo __('Add Curso'); ?></legend>
+	<?php
+		echo $this->Form->input('nombre_del_curso');
+		echo $this->Form->input('objetivo_del_curso');
+		echo $this->Form->input('costo_auxiliares');
+		echo $this->Form->input('costo_estudiantes');
+		echo $this->Form->input('costo_otros');
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Submit'));?>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Cursos'), array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(__('List Descripciones'), array('controller' => 'descripciones', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Descripcion'), array('controller' => 'descripciones', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Inscripciones'), array('controller' => 'inscripciones', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Inscripcion'), array('controller' => 'inscripciones', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Grupos'), array('controller' => 'grupos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Grupo'), array('controller' => 'grupos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Temas'), array('controller' => 'temas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Tema'), array('controller' => 'temas', 'action' => 'add')); ?> </li>
+	</ul>
+</div>

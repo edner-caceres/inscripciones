@@ -1,0 +1,43 @@
+2012-03-24 09:32:44 Error: [MissingControllerException] Controller class GruposController could not be found.
+#0 C:\xamp2\xampp\htdocs\inscripciones\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-24 10:40:33 Error: [PDOException] SQLSTATE[22003]: Numeric value out of range: 7 ERROR:  desbordamiento de campo numeric
+DETAIL:  Un campo con precisión 3, escala 2 debe redondear a un valor absoluto menor que 10^1.
+#0 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(436): PDOStatement->execute(Array)
+#1 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(403): DboSource->_execute('INSERT INTO "cu...', Array)
+#2 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(967): DboSource->execute('INSERT INTO "cu...')
+#3 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Model.php(1646): DboSource->create(Object(Curso), Array, Array)
+#4 C:\xamp2\xampp\htdocs\inscripciones\Controller\CursosController.php(43): Model->save(Array)
+#5 [internal function]: CursosController->add()
+#6 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Controller\Controller.php(473): ReflectionMethod->invokeArgs(Object(CursosController), Array)
+#7 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Routing\Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Routing\Dispatcher.php(86): Dispatcher->_invoke(Object(CursosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xamp2\xampp\htdocs\inscripciones\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-03-24 10:41:10 Error: [PDOException] SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para el tipo numeric: «30,00»
+LINE 1: ...al estudiante las estructuras avanzadas del PHP', '30,00', '...
+                                                             ^
+#0 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(436): PDOStatement->execute(Array)
+#1 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(403): DboSource->_execute('INSERT INTO "cu...', Array)
+#2 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(967): DboSource->execute('INSERT INTO "cu...')
+#3 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Model.php(1646): DboSource->create(Object(Curso), Array, Array)
+#4 C:\xamp2\xampp\htdocs\inscripciones\Controller\CursosController.php(43): Model->save(Array)
+#5 [internal function]: CursosController->add()
+#6 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Controller\Controller.php(473): ReflectionMethod->invokeArgs(Object(CursosController), Array)
+#7 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Routing\Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Routing\Dispatcher.php(86): Dispatcher->_invoke(Object(CursosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xamp2\xampp\htdocs\inscripciones\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-03-24 10:41:32 Error: [PDOException] SQLSTATE[22003]: Numeric value out of range: 7 ERROR:  desbordamiento de campo numeric
+DETAIL:  Un campo con precisión 3, escala 2 debe redondear a un valor absoluto menor que 10^1.
+#0 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(436): PDOStatement->execute(Array)
+#1 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(403): DboSource->_execute('INSERT INTO "cu...', Array)
+#2 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Datasource\DboSource.php(967): DboSource->execute('INSERT INTO "cu...')
+#3 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Model\Model.php(1646): DboSource->create(Object(Curso), Array, Array)
+#4 C:\xamp2\xampp\htdocs\inscripciones\Controller\CursosController.php(43): Model->save(Array)
+#5 [internal function]: CursosController->add()
+#6 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Controller\Controller.php(473): ReflectionMethod->invokeArgs(Object(CursosController), Array)
+#7 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Routing\Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Routing\Dispatcher.php(86): Dispatcher->_invoke(Object(CursosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xamp2\xampp\htdocs\inscripciones\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
