@@ -198,4 +198,13 @@ class InscripcionesController extends AppController {
 		$this->Session->setFlash(__('Inscripcion was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+	/**
+ * admin_delete method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function administration() {
+		$this->layout='admin';
+	}
 }

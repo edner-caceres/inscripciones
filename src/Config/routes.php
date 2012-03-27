@@ -30,7 +30,12 @@
  * ...and connect the rest of 'Pages' controller's urls.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
-
+	
+/**
+* administration page
+*/
+	Router::connect('/admin', array('controller' => 'inscripciones', 'action' =>'administration'));
+	
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

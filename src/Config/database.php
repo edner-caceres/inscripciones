@@ -6,7 +6,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'postgres',
-		'password' => 'postgres',
+		'password' => 'hpscan5590jeT',
 		'database' => 'inscripciones',
 	);
 }
