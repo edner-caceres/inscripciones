@@ -41,3 +41,45 @@ DETAIL:  Un campo con precisión 3, escala 2 debe redondear a un valor absoluto 
 #8 C:\xamp2\xampp\cakephp-2.0\lib\Cake\Routing\Dispatcher.php(86): Dispatcher->_invoke(Object(CursosController), Object(CakeRequest), Object(CakeResponse))
 #9 C:\xamp2\xampp\htdocs\inscripciones\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2012-03-26 23:02:08 Error: [MissingControllerException] Controller class FtpUsersController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:02:08 Error: [MissingControllerException] Controller class FtpGroupsController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:03:23 Error: [MissingControllerException] Controller class FtpUsersController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:03:23 Error: [MissingControllerException] Controller class FtpGroupsController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:04:14 Error: [MissingControllerException] Controller class FtpGroupsController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:04:14 Error: [MissingControllerException] Controller class FtpUsersController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:05:46 Error: [MissingControllerException] Controller class FtpGroupsController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:05:46 Error: [MissingControllerException] Controller class FtpUsersController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:06:39 Error: [MissingControllerException] Controller class FtpGroupsController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:06:39 Error: [MissingControllerException] Controller class FtpUsersController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:16:58 Error: [MissingControllerException] Controller class FtpUsersController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:16:58 Error: [MissingControllerException] Controller class FtpGroupsController could not be found.
+#0 D:\proyectos\inscripciones\src\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:19:24 Error: [MissingControllerException] Controller class FtpGroupsController could not be found.
+#0 C:\xampp\htdocs\inscripciones\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-26 23:19:24 Error: [MissingControllerException] Controller class FtpUsersController could not be found.
+#0 C:\xampp\htdocs\inscripciones\webroot\index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

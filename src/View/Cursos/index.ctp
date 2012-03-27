@@ -5,9 +5,6 @@
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('nombre_del_curso');?></th>
 			<th><?php echo $this->Paginator->sort('objetivo_del_curso');?></th>
-			<th><?php echo $this->Paginator->sort('costo_auxiliares');?></th>
-			<th><?php echo $this->Paginator->sort('costo_estudiantes');?></th>
-			<th><?php echo $this->Paginator->sort('costo_otros');?></th>
 			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
 	<?php
@@ -16,9 +13,6 @@
 		<td><?php echo h($curso['Curso']['id']); ?>&nbsp;</td>
 		<td><?php echo h($curso['Curso']['nombre_del_curso']); ?>&nbsp;</td>
 		<td><?php echo h($curso['Curso']['objetivo_del_curso']); ?>&nbsp;</td>
-		<td><?php echo h($curso['Curso']['costo_auxiliares']); ?>&nbsp;</td>
-		<td><?php echo h($curso['Curso']['costo_estudiantes']); ?>&nbsp;</td>
-		<td><?php echo h($curso['Curso']['costo_otros']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $curso['Curso']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $curso['Curso']['id'])); ?>
@@ -48,11 +42,13 @@
 		<li><?php echo $this->Html->link(__('New Curso'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Descripciones'), array('controller' => 'descripciones', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Descripcion'), array('controller' => 'descripciones', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Inscripciones'), array('controller' => 'inscripciones', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Inscripcion'), array('controller' => 'inscripciones', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Grupos'), array('controller' => 'grupos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Grupo'), array('controller' => 'grupos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Temas'), array('controller' => 'temas', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Tema'), array('controller' => 'temas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Inscripciones'), array('controller' => 'inscripciones', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Inscripcion'), array('controller' => 'inscripciones', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Costos'), array('controller' => 'costos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Costo'), array('controller' => 'costos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

@@ -16,21 +16,6 @@
 			<?php echo h($curso['Curso']['objetivo_del_curso']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Costo Auxiliares'); ?></dt>
-		<dd>
-			<?php echo h($curso['Curso']['costo_auxiliares']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Costo Estudiantes'); ?></dt>
-		<dd>
-			<?php echo h($curso['Curso']['costo_estudiantes']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Costo Otros'); ?></dt>
-		<dd>
-			<?php echo h($curso['Curso']['costo_otros']); ?>
-			&nbsp;
-		</dd>
 	</dl>
 </div>
 <div class="actions">
@@ -42,12 +27,14 @@
 		<li><?php echo $this->Html->link(__('New Curso'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Descripciones'), array('controller' => 'descripciones', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Descripcion'), array('controller' => 'descripciones', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Inscripciones'), array('controller' => 'inscripciones', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Inscripcion'), array('controller' => 'inscripciones', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Grupos'), array('controller' => 'grupos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Grupo'), array('controller' => 'grupos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Temas'), array('controller' => 'temas', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Tema'), array('controller' => 'temas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Inscripciones'), array('controller' => 'inscripciones', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Inscripcion'), array('controller' => 'inscripciones', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Costos'), array('controller' => 'costos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Costo'), array('controller' => 'costos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
@@ -84,47 +71,6 @@
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Descripcion'), array('controller' => 'descripciones', 'action' => 'add'));?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Inscripciones');?></h3>
-	<?php if (!empty($curso['Inscripcion'])):?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Cuenta Id'); ?></th>
-		<th><?php echo __('Grupo Id'); ?></th>
-		<th><?php echo __('Persona Id'); ?></th>
-		<th><?php echo __('Fecha Inscripcion'); ?></th>
-		<th><?php echo __('Observaciones'); ?></th>
-		<th><?php echo __('Curso Id'); ?></th>
-		<th class="actions"><?php echo __('Actions');?></th>
-	</tr>
-	<?php
-		$i = 0;
-		foreach ($curso['Inscripcion'] as $inscripcion): ?>
-		<tr>
-			<td><?php echo $inscripcion['id'];?></td>
-			<td><?php echo $inscripcion['cuenta_id'];?></td>
-			<td><?php echo $inscripcion['grupo_id'];?></td>
-			<td><?php echo $inscripcion['persona_id'];?></td>
-			<td><?php echo $inscripcion['fecha_inscripcion'];?></td>
-			<td><?php echo $inscripcion['observaciones'];?></td>
-			<td><?php echo $inscripcion['curso_id'];?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'inscripciones', 'action' => 'view', $inscripcion['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'inscripciones', 'action' => 'edit', $inscripcion['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'inscripciones', 'action' => 'delete', $inscripcion['id']), null, __('Are you sure you want to delete # %s?', $inscripcion['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Inscripcion'), array('controller' => 'inscripciones', 'action' => 'add'));?> </li>
 		</ul>
 	</div>
 </div>
@@ -203,6 +149,82 @@
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Tema'), array('controller' => 'temas', 'action' => 'add'));?> </li>
+		</ul>
+	</div>
+</div>
+<div class="related">
+	<h3><?php echo __('Related Inscripciones');?></h3>
+	<?php if (!empty($curso['Inscripcion'])):?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Cuenta Id'); ?></th>
+		<th><?php echo __('Grupo Id'); ?></th>
+		<th><?php echo __('Persona Id'); ?></th>
+		<th><?php echo __('Fecha Inscripcion'); ?></th>
+		<th><?php echo __('Observaciones'); ?></th>
+		<th><?php echo __('Curso Id'); ?></th>
+		<th class="actions"><?php echo __('Actions');?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($curso['Inscripcion'] as $inscripcion): ?>
+		<tr>
+			<td><?php echo $inscripcion['id'];?></td>
+			<td><?php echo $inscripcion['cuenta_id'];?></td>
+			<td><?php echo $inscripcion['grupo_id'];?></td>
+			<td><?php echo $inscripcion['persona_id'];?></td>
+			<td><?php echo $inscripcion['fecha_inscripcion'];?></td>
+			<td><?php echo $inscripcion['observaciones'];?></td>
+			<td><?php echo $inscripcion['curso_id'];?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'inscripciones', 'action' => 'view', $inscripcion['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'inscripciones', 'action' => 'edit', $inscripcion['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'inscripciones', 'action' => 'delete', $inscripcion['id']), null, __('Are you sure you want to delete # %s?', $inscripcion['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('New Inscripcion'), array('controller' => 'inscripciones', 'action' => 'add'));?> </li>
+		</ul>
+	</div>
+</div>
+<div class="related">
+	<h3><?php echo __('Related Costos');?></h3>
+	<?php if (!empty($curso['Costo'])):?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Curso Id'); ?></th>
+		<th><?php echo __('Nombre Costo'); ?></th>
+		<th><?php echo __('Valor Costo'); ?></th>
+		<th class="actions"><?php echo __('Actions');?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($curso['Costo'] as $costo): ?>
+		<tr>
+			<td><?php echo $costo['id'];?></td>
+			<td><?php echo $costo['curso_id'];?></td>
+			<td><?php echo $costo['nombre_costo'];?></td>
+			<td><?php echo $costo['valor_costo'];?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'costos', 'action' => 'view', $costo['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'costos', 'action' => 'edit', $costo['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'costos', 'action' => 'delete', $costo['id']), null, __('Are you sure you want to delete # %s?', $costo['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('New Costo'), array('controller' => 'costos', 'action' => 'add'));?> </li>
 		</ul>
 	</div>
 </div>
